@@ -1,18 +1,18 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from 'react';
+import { connect } from 'react-redux';
 
-import { getBooksList } from "../../redux/selectors";
-import Book from "./Book";
-import "./BooksList.css"
+import { getBooksList } from '../../redux/selectors';
+import Book from './Book';
+import './BooksList.css'
 
 const BooksList = ({ books }) => (
   <div>
     {
       books && books.length
-        ? <ul className="books-list">
+        ? <ul className='books-list'>
             { books.map((book, index) => <Book book={book} key={index}/>) }
           </ul>
-        : "No results"
+        : 'No results'
     }
   </div>
 );

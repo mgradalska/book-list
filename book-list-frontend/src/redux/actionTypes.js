@@ -1,5 +1,5 @@
-export const SET_FILTER = "SET_FILTER";
+export const SET_FILTER = 'SET_FILTER';
 
-export const BOOKS_LOADED = "BOOKS_LOADED";
+export const BOOKS_LOADED = 'BOOKS_LOADED';
 
-export const CLEAR_BOOKS = "CLEAR_BOOKS";
+export const CLEAR_BOOKS = 'CLEAR_BOOKS';

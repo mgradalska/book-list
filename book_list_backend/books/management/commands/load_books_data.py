@@ -12,10 +12,10 @@ logger = logging.getLogger(__name__)
 
 
 class CsvReader:
-    FILES_DIR = "./books/management/files"
+    FILES_DIR = './books/management/files'
 
     def __init__(self, filename):
-        self._file_path = f"{self.FILES_DIR}/{filename}"
+        self._file_path = f'{self.FILES_DIR}/{filename}'
 
     def read_rows(self):
         with open(self._file_path) as file:
@@ -47,10 +47,10 @@ class BookReader:
             book.genre = genre
             book.author = author
             book.save()
-            logger.info(f"Book {isbn} updated.")
+            logger.info(f'Book {isbn} updated.')
         except ObjectDoesNotExist:
             Book.objects.create(isbn=isbn, author=author, genre=genre, title=title)
-            logger.info(f"Book {isbn} created.")
+            logger.info(f'Book {isbn} created.')
 
 
 class RatingReader:
@@ -67,9 +67,9 @@ class RatingReader:
         try:
             book = Book.objects.get(isbn=isbn)
             Rating.objects.create(book=book, rate=rate, description=description)
-            logger.info(f"Rating for book {isbn} added.")
+            logger.info(f'Rating for book {isbn} added.')
         except ObjectDoesNotExist:
-            logger.error(F"Book with given ISBN ({isbn}) does not exist.")
+            logger.error(F'Book with given ISBN ({isbn}) does not exist.')
 
 
 class Command(BaseCommand):
@@ -79,12 +79,12 @@ class Command(BaseCommand):
         parser.add_argument(
             '--books-file',
             type=str,
-            help="Books filename, default books.csv"
+            help='Books filename, default books.csv'
         )
         parser.add_argument(
             '--ratings-file',
             type=str,
-            help="Ratings filename, default ratings.csv"
+            help='Ratings filename, default ratings.csv'
         )
         parser.add_argument(
             '--skip-books',

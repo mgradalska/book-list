@@ -25,15 +25,19 @@ Required tools:
 
 #### Run backend
 
-Go to `/book_list_backend` directory and run following commands:
+Go to `book_list_backend/` directory and run following commands:
 
 ```pip install -r requirements```
+
+```python manage.py migrate```
 
 ```python manage.py runserver```
 
 #### Run frontend
 
 Go to `book-list-frontned/` directory and run following commands:
+
+```npm install```
 
 ```npm start```
 

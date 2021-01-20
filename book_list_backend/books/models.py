@@ -8,7 +8,7 @@ class Validators:
     def validate_isbn(isbn):
         isbn_digits = len(str(isbn))
         if isbn_digits != 10 and isbn_digits != 13:
-            raise ValidationError(f"Incorrect ISBN value: {isbn}. ISBN must contain 10 or 13 digits.")
+            raise ValidationError(f'Incorrect ISBN value: {isbn}. ISBN must contain 10 or 13 digits.')
 
 
 class Author(models.Model):
@@ -37,4 +37,4 @@ class Book(models.Model):
         return round(avg, 1) if avg else None
 
     def __str__(self):
-        return f"{self.title}, {self.author.name}"
+        return f'{self.title}, {self.author.name}'

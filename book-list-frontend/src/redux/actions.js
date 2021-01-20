@@ -1,4 +1,4 @@
-import { BOOKS_LOADED, CLEAR_BOOKS, SET_FILTER } from "./actionTypes";
+import { BOOKS_LOADED, CLEAR_BOOKS, SET_FILTER } from './actionTypes';
 
 let filterTimeout;
 
@@ -15,7 +15,7 @@ export const setFilter = filter => dispatch => {
 }
 
 export const searchBooks = filter => async (dispatch) => {
-  let apiURL = "http://localhost:8000/books/";
+  let apiURL = 'http://localhost:8000/books/';
   if (filter) apiURL += `?search=${filter}`
   const response = await fetch(apiURL);
   const books = await response.json();

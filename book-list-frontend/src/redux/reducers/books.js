@@ -1,4 +1,4 @@
-import { BOOKS_LOADED, CLEAR_BOOKS } from "../actionTypes";
+import { BOOKS_LOADED, CLEAR_BOOKS } from '../actionTypes';
 
 const initialState = {
   books: [],

@@ -1,4 +1,4 @@
-import { SET_FILTER } from "../actionTypes";
+import { SET_FILTER } from '../actionTypes';
 
 const initialState = '';
 

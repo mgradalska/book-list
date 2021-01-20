@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import "./Book.css"
+import './Book.css'
 
 const Book = ({ book }) => (
-  <li className="book-item">
+  <li className='book-item'>
     <span>{ book.title }</span>
     <span>{ book.author.name }</span>
     <span>{ book.avg_rating }</span>

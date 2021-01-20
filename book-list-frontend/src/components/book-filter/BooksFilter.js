@@ -1,8 +1,8 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from 'react';
+import { connect } from 'react-redux';
 
 import './BooksFilter.css';
-import { setFilter } from "../../redux/actions";
+import { setFilter } from '../../redux/actions';
 
 const BooksFilter = ({ filter, setFilter }) => {
   const handleFilterChange = event => {
@@ -12,7 +12,7 @@ const BooksFilter = ({ filter, setFilter }) => {
 
   return (
     <div>
-      <input placeholder="Search" type="text" value={filter} onChange={ handleFilterChange }/>
+      <input placeholder='Search' type='text' value={filter} onChange={ handleFilterChange }/>
     </div>
   );
 };
